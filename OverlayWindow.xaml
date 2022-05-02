@@ -1,0 +1,27 @@
+﻿<Window x:Class="PoELevellingOverlay.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoELevellingOverlay"
+        mc:Ignorable="d"
+        Title="OverlayWindow" Height="250" Width="600"
+        AllowsTransparency="True" WindowStyle="None"
+        Deactivated="Window_Deactivated"
+        MouseDown="Window_MouseDown">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="Black"></SolidColorBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="instructionText" Foreground="White" FontSize="20" TextWrapping="Wrap" >Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</TextBlock>
+        <!--
+        <Button Click="CloseWindow" Grid.Row="1">Close window</Button>
+        -->
+    </Grid>
+</Window>
