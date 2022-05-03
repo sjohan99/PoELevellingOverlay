@@ -23,11 +23,14 @@ namespace PoELevellingOverlay
     {
 
         public bool WindowLocked { get; set; } = true;
+        InstructionReader reader = new InstructionReader();
 
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
             LockWindow();
+            reader.init();
+            UpdateText(reader.getCurrentInstruction());
         }
 
         public void LockWindow()
@@ -45,8 +48,6 @@ namespace PoELevellingOverlay
             Trace.WriteLine("Unlocked Window");
         }
 
-        int counter = 0;
-
         public OverlayWindow()
         {
             InitializeComponent();
@@ -63,24 +64,22 @@ namespace PoELevellingOverlay
             window.Topmost = true;
         }
 
-        public void UpdateText()
+        public void UpdateText(string text)
         {
+            progress.Inlines.Clear();
+            progress.Inlines.Add(new Run(reader.getProgress()));
             instructionText.Inlines.Clear();
-            instructionText.Inlines.Add(new Run(counter.ToString()));
+            instructionText.Inlines.Add(new Run(text));
         }
 
         public void inc()
         {
-            counter++;
-            instructionText.Inlines.Clear();
-            instructionText.Inlines.Add(new Run(counter.ToString()));
+            UpdateText(reader.getNextInstruction());
         }
 
         public void dec()
         {
-            counter--;
-            instructionText.Inlines.Clear();
-            instructionText.Inlines.Add(new Run(counter.ToString()));
+            UpdateText(reader.getPreviousInstruction());
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

@@ -24,12 +24,16 @@ namespace PoELevellingOverlay
     public partial class MainWindow : Window
     {
         OverlayWindow overlayWindow;
+        InstructionReader reader;
 
         public MainWindow()
         {
             InitializeComponent();
             overlayWindow = new OverlayWindow();
+            reader = new InstructionReader();
         }
+
+
 
         private void OpenOverlayWindow(object sender, RoutedEventArgs e)
         {
@@ -42,12 +46,6 @@ namespace PoELevellingOverlay
             {
                 overlayWindow.Show();
             }
-            
-        }
-
-        private void NextStep(object sender, RoutedEventArgs e)
-        {
-            overlayWindow.UpdateText();
         }
 
         private void UnlockOverlay(object sender, RoutedEventArgs e)
@@ -57,14 +55,25 @@ namespace PoELevellingOverlay
                 if (overlayWindow.WindowLocked)
                 {
                     overlayWindow.UnlockWindow();
+                    overlayButton.Content = "Lock overlay";
                 }
                 else
                 {
                     overlayWindow.LockWindow();
+                    overlayButton.Content = "Unlock overlay";
                 }
-                
             }
             
+        }
+
+        private void OpenDirectoryDialog(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+            if (dialog.ShowDialog(this).GetValueOrDefault())
+            {
+                Properties.Settings.Default["InstructionPath"] = dialog.SelectedPath;
+                Properties.Settings.Default.Save();
+            }
         }
 
 
@@ -112,12 +121,7 @@ namespace PoELevellingOverlay
                     {
                         case HOTKEY_ID:
                             int vkey = (((int)lParam >> 16) & 0xFFFF);
-                            if (vkey == VK_CAPITAL)
-                            {
-                                overlayWindow.UpdateText();
-                                Trace.WriteLine("Capslock pressed");
-                            }
-                            else if (vkey == VK_RIGHT){
+                            if (vkey == VK_RIGHT){
                                 overlayWindow.inc();
                             }
                             else if (vkey == VK_LEFT)

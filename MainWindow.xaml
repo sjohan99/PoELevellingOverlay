@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PoELevellingOverlay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="250">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
-        <Button Click="OpenOverlayWindow">Open overlay</Button>
-        <Button Grid.Column="1" Click="NextStep">Next Step</Button>
-        <Button Grid.Column="1" Grid.Row="1" Click="UnlockOverlay">Unlock overlay</Button> 
+        <Button Click="OpenOverlayWindow" Background="Black" Foreground="White" FontWeight="Bold">Toggle overlay</Button>
+        <Button x:Name="overlayButton" Grid.Row="1" Click="UnlockOverlay" Background="Black" Foreground="White" FontWeight="Bold">Unlock overlay</Button>
+        <Button Grid.Row="2" Click="OpenDirectoryDialog" Background="Black" Foreground="White" FontWeight="Bold">Choose instruction folder</Button>
     </Grid>
 </Window>
