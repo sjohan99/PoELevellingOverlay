@@ -37,6 +37,7 @@ namespace PoELevellingOverlay
 
         private void OpenOverlayWindow(object sender, RoutedEventArgs e)
         {
+
             //OverlayWindow overlay = new OverlayWindow();
             if (overlayWindow.Visibility == Visibility.Visible)
             {
@@ -83,7 +84,8 @@ namespace PoELevellingOverlay
         [DllImport("user32.dll")]
         private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
-        private const int HOTKEY_ID = 9000;
+        private const int CTRL_ALT_HOTKEY_ID = 9000;
+        private const int ALT_HOTKEY_ID = 9001;
 
         //Modifiers:
         private const uint MOD_NONE = 0x0000; //[NONE]
@@ -91,10 +93,15 @@ namespace PoELevellingOverlay
         private const uint MOD_CONTROL = 0x0002; //CTRL
         private const uint MOD_SHIFT = 0x0004; //SHIFT
         private const uint MOD_WIN = 0x0008; //WINDOWS
+        
+
+
                                              //CAPS LOCK:
         private const uint VK_CAPITAL = 0x14;
         private const uint VK_RIGHT = 0x27;
         private const uint VK_LEFT = 0x25;
+        private const uint VK_OEM_COMMA = 0xBC;
+        private const uint VK_OEM_PERIOD = 0xBE;
 
         private HwndSource source;
 
@@ -106,9 +113,11 @@ namespace PoELevellingOverlay
             source = HwndSource.FromHwnd(handle);
             source.AddHook(HwndHook);
 
-            RegisterHotKey(handle, HOTKEY_ID, MOD_CONTROL, VK_CAPITAL);//CTRL + CAPS_LOCK
-            RegisterHotKey(handle, HOTKEY_ID, MOD_CONTROL | MOD_ALT, VK_RIGHT);
-            RegisterHotKey(handle, HOTKEY_ID, MOD_CONTROL | MOD_ALT, VK_LEFT);
+            RegisterHotKey(handle, CTRL_ALT_HOTKEY_ID, MOD_CONTROL, VK_CAPITAL);//CTRL + CAPS_LOCK
+            RegisterHotKey(handle, CTRL_ALT_HOTKEY_ID, MOD_CONTROL | MOD_ALT, VK_RIGHT);
+            RegisterHotKey(handle, CTRL_ALT_HOTKEY_ID, MOD_CONTROL | MOD_ALT, VK_LEFT);
+            RegisterHotKey(handle, CTRL_ALT_HOTKEY_ID, MOD_ALT, VK_OEM_COMMA);
+            RegisterHotKey(handle, CTRL_ALT_HOTKEY_ID, MOD_ALT, VK_OEM_PERIOD);
         }
 
         private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
@@ -119,12 +128,13 @@ namespace PoELevellingOverlay
                 case WM_HOTKEY:
                     switch (wParam.ToInt32())
                     {
-                        case HOTKEY_ID:
+                        case ALT_HOTKEY_ID:
+                        case CTRL_ALT_HOTKEY_ID:
                             int vkey = (((int)lParam >> 16) & 0xFFFF);
-                            if (vkey == VK_RIGHT){
+                            if (vkey == VK_RIGHT || vkey == VK_OEM_PERIOD){
                                 overlayWindow.inc();
                             }
-                            else if (vkey == VK_LEFT)
+                            else if (vkey == VK_LEFT || vkey == VK_OEM_COMMA)
                             {
                                 overlayWindow.dec();
                             }

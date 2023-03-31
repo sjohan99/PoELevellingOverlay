@@ -8,7 +8,8 @@
         Title="OverlayWindow" Height="200" Width="600"
         AllowsTransparency="True" WindowStyle="None"
         Deactivated="Window_Deactivated"
-        MouseDown="Window_MouseDown">
+        MouseDown="Window_MouseDown"
+        Closing="On_Close">
     <Window.Background>
         <SolidColorBrush Opacity="0.5" Color="Black"></SolidColorBrush>
     </Window.Background>

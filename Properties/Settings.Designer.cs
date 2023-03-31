@@ -34,5 +34,29 @@ namespace PoELevellingOverlay.Properties {
                 this["InstructionPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SavedAct {
+            get {
+                return ((int)(this["SavedAct"]));
+            }
+            set {
+                this["SavedAct"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SavedStep {
+            get {
+                return ((int)(this["SavedStep"]));
+            }
+            set {
+                this["SavedStep"] = value;
+            }
+        }
     }
 }

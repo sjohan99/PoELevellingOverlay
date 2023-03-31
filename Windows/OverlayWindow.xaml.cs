@@ -70,6 +70,7 @@ namespace PoELevellingOverlay
             progress.Inlines.Add(new Run(reader.getProgress()));
             instructionText.Inlines.Clear();
             instructionText.Inlines.Add(new Run(text));
+            SaveProgress();
         }
 
         public void inc()
@@ -82,6 +83,18 @@ namespace PoELevellingOverlay
             UpdateText(reader.getPreviousInstruction());
         }
 
+        private void On_Close(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveProgress()
+        {
+            Properties.Settings.Default["SavedAct"] = reader.Act;
+            Properties.Settings.Default["SavedStep"] = reader.Instruction;
+            Properties.Settings.Default.Save();
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left )
@@ -89,6 +102,5 @@ namespace PoELevellingOverlay
                 this.DragMove();
             }
         }
-
     }
 }

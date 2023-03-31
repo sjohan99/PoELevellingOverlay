@@ -13,8 +13,8 @@ namespace PoELevellingOverlay
     {
 
         List<List<string>> Acts = new List<List<string>>();
-        private int Act = 0;
-        private int Instruction = 0;
+        public int Act = 0;
+        public int Instruction = 0;
 
         public void init()
         {
@@ -36,6 +36,20 @@ namespace PoELevellingOverlay
                         instructions.Add(line);
                     }
                     Acts.Add(instructions);
+                }
+                var savedAct = Properties.Settings.Default["SavedAct"];
+                var savedInstruction = Properties.Settings.Default["SavedStep"];
+                Trace.WriteLine("Looked for settings");
+                if (savedAct != null)
+                {
+                    Act = (int) savedAct;
+                    Trace.WriteLine(savedAct.ToString());
+                    Trace.WriteLine("Enter savedact if");
+                }
+                if (savedInstruction != null)
+                {
+                    Instruction = (int) savedInstruction;
+                    Trace.WriteLine("Entered savedinstruction if");
                 }
             }
         }
