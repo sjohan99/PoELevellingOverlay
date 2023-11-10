@@ -1,0 +1,4 @@
+go THE DRIED LAKE Kill Voll, take questitem -> TOWN -> open mines -> MINES 1 -> MINES 2 get Deshret’s spirit -> CRYSTAL VEINS, get WP -> TOWN
+TOWN Tasuni skillpoint, Oyun golem gem -> CRYSTAL VEINS -> KAOMS DREAM all the way to boss -> TOWN -> CYSTAL VEINS -> DARESSOS DREAM, get WP in THE GRAND ARENA, keep going until boss -> TOWN -> CRYSTAL VEINS
+CRYSTAL VEINS Talk Dialla -> BELLY OF THE BEAST 1 -> BELLY OF THE BEAST 2 -> BOWELS OF THE BEAST kill Piety -> THE HARVEST, get WP, slay Malachai’s guardians -> THE BLACK CORE, kill Malachai -> TOWN
+TOWN Dialla for gem reward -> THE ASCENT -> ORIATH PORTAL

@@ -1,0 +1,7 @@
+Go left -> RIVERWAYS get WP (usually upper left) -> WETLANDS kill oak, get WP (usually upper left) -> RIVERWAYS
+RIVERWAYS go left from wetlands entrance -> WESTERN FOREST follow path to get WP, go left or right for WEAVERS CHAMBERS (give quest item to Silk) or Alira
+RIVERWAYS go bottom to kill blackguards, open exit -> WP to act 1 TOWN Bestel skillpoint -> FOREST ENCAMPMENT go right -> OLD FIELDS
+OLD FIELDS follow path -> CROSSROADS -> follow path to get WP, downward -> FELSHIRE RUINS downwards -> THE CRYPT lab -> TOWN -> CROSSROADS
+CROSSROADS go right -> BROKEN BRIDGE follow right wall, kraityn -> TOWN Eramir for Apex -> CROSSROADS upwards -> CHAMBER OF SINS 1 get WP (pref) -> CHAMBER OF SINS 2
+CHAMBER OF SINS 2 lab, find + kill Fidelitas (usually upper left), take quest item, speak with Helena -> TOWN Gruest gem -> WETLANDS poison roots -> VAAL RUINS -> NORTHERN FOREST
+NORTHERN FOREST go upwards -> THE CAVERNS get WP -> ANCIENT PYRAMID keep ascending until -> PYRAMID APEX kill boss -> CITY OF SARN kill guards, SPEAK WITH CLARISSA!! -> SARN ENCAMPMENT

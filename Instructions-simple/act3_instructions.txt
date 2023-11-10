@@ -1,0 +1,6 @@
+SLUMS -> CREMATORIUM get WP, lab, find + kill Piety, get quest item -> TOWN clarrisa quest item -> SLUMS find sewer grating -> THE SEWERS
+THE SEWERS get quest items, 1 before WP, 2 after -> MARKETPLACE get wp, go upper right of wp -> CATACOMBS lab -> TOWN -> MARKETPLACE -> BATTLEFRONT
+BATTLEFRONT find wp (usually center), go downards, find questitem, go upward from WP -> SOLARIS TEMPLE 1 -> SOLARIS TEMPLE 2 get wp, wp to -> BATTLEFRONT go left -> THE DOCKS
+THE DOCKS find questitem -> TOWN Hargan skillpoint -> SOLARIS TMEPLE 2 Dialla quest item -> SEWERS burn blockage -> EBONY BARRACKS get wp, go upwards, kill General, go upwards -> LUNARIS TEMPLE 1
+LUNARIS TEMPLE 1 get wp -> LUNARIS TEMPLE 2 kill Piety, take questitem -> TOWN Grigor skillpoint, Maramoa gem -> EBONY BARRACKS go right -> IMPERIAL GARDENS
+IMPERIAL GARDENS follow path to get WP, (go upper left for Library), go upwards left for lab, go right -> SCEPTRE OF GOD ascend levels -> UPPER SCEPTRE OF GOD ascend, kill Dominus -> AQUEDUCT -> HIGHGATE

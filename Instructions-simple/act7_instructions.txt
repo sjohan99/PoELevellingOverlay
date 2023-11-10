@@ -1,0 +1,5 @@
+Enter BROKEN RIDGE go bottom left -> THE CROSSROADS get WP in center, bottom fork -> FELLSHIRE RUINS -> THE CRYPT 1 get WP, lab, find Sarcophagus -> THE CRYPT 2
+THE CRYPT 2 find container and take map -> TOWN -> CROSSROADS upper path -> CHAMBER OF SINS 1 get WP, use map device + do it -> CHAMBER OF SINS 1 talk with Silk for quest item -> CHAMBER OF SINS 2
+CHAMBER OF SINS 2 do lab -> THE DEN -> ASHEN FIELDS -> FORTRESS ENCAMPMENT slay gruest -> NORTHERN FOREST get WP -> DREAD THICKET -> DEN OF DESPAIR kill Gruthkul -> DREAD THICKET
+DREAD THICKET collect 7 fireflies -> TOWN Eramir skillpoints -> NORTHERN FOREST -> CAUSEWAY get WP, find Kishara's star -> VAAL CITY
+VAAL CITY find Yeena and WP, speak Yeena -> TEMPLE OF DECAY 1 -> TEMPLE OF DECAY 2 -> ARAKAALIS WEB kill boss -> SARN RAMPARTS -> SARN ENCAMPMENT

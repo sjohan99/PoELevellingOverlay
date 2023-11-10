@@ -1,0 +1,4 @@
+Enter CATHEDRAL ROOFTOP go left -> CATHEDRAL APEX free Bannon -> CATHEDRAL ROOFTOP go right -> RAVAGED SQUARE go upwards get WP
+RAVAGED SQUARE -> OSSUARY lab -> RAVAGED SQUARE go right -> TORCHED COURTS -> DESECRATED CHAMBERS get WP, kill Avarius -> TOWN talk Bannon, Lani reward
+TOWN -> RAVAGED SQUARE go bottom middle -> CONTROL BLOCKS find Vilenta -> TOWN Lani skillpoint, talk Innocence -> RAVAGED SQUARE talk Innocence -> Canals
+CANALS -> FEEDING TROUGH speak sin -> ALTAR OF HUNGER kill kitava -> TOWN Lani skillpoint
